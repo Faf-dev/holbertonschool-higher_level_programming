@@ -27,4 +27,4 @@ def text_indentation(text):
             continue
         i += 1
 
-    print("{}".format(print_text))
+    print("{}".format(print_text), end="")
