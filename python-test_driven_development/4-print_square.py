@@ -6,7 +6,7 @@ print_square - print a square with #
 
 def print_square(size):
     """
-    print_square :
+    print_square : print a square
 
     parameters :
     size : The size of the square
