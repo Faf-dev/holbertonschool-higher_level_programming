@@ -6,7 +6,7 @@ add_integer : add a with b
 
 def add_integer(a, b=98):
     """
-    add to integer
+    add two integer
 
     args:
     a : integer or float

@@ -22,7 +22,7 @@ This is a test file, First import ``say_my_name`` from ``say_my_name`` module
     TypeError: first_name must be a string
 
     >>> say_my_name("Escobar")
-    My name is Escobar
+    My name is Escobar 
 
     >>> say_my_name(None)
     Traceback (most recent call last):
