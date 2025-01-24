@@ -44,6 +44,6 @@ This is a test file, First import ``add_integer`` from ``add_integer`` module
     OverflowError: cannot convert float infinity to integer
 
     >>> add_integer(float('nan'))
-    Traceback (module recent call last):
+    Traceback (most recent call last):
         ...
     ValueError: cannot convert float NaN to integer
