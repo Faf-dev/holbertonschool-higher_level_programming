@@ -1,10 +1,18 @@
 #!/usr/bin/python3
 """
-
+text_indentation : indent text
 """
 
 
 def text_indentation(text):
+    """
+    text_indentation - indent text if needed
+
+    parameters:
+    text : the text to indent
+
+    Return: Nothing
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     print_text = ""
