@@ -12,6 +12,10 @@ class TestMaxInteger(unittest.TestCase):
     def test_integer(self):
         self.assertEqual(max_integer([3, 6, 1, 9]), 9)
 
+    # Test with the max value first
+    def test_first(self):
+        self.assertEqual(max_integer([10, 1, 2, 8]), 10)
+
     # Test with negative integer
     def test_negative(self):
         self.assertEqual(max_integer([-10, -1, -8, -49]), -1)
