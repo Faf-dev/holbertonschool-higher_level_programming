@@ -14,5 +14,5 @@ def matrix_divided(matrix, div):
 
     Return: result of the division
     """
-    result = [[int(x / div * 100) / 100 for x in row] for row in matrix]
+    result = [[round(x / div, 2) for x in row] for row in matrix]
     return result
