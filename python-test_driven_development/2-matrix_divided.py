@@ -14,5 +14,9 @@ def matrix_divided(matrix, div):
 
     Return: result of the division
     """
+    if not isinstance(div, (int, float)):
+        raise TypeError("div must be a number")
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
     result = [[round(x / div, 2) for x in row] for row in matrix]
     return result
