@@ -1,0 +1,26 @@
+The ``matrix_divided`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+This is a test file, First import ``matrix_divided`` from ``matrix_divided`` module
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+    >>> matrix_divided(matrix, 2)
+    [[0.5, 1, 1.5], [2, 2.5, 3]]
+
+    >>> matrix_divided(matrix, 3.0659)
+
+
+    >>> matrix_divided(3)
+
+
+    >>> matrix_divided(matrix, "hello")
+
+
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by 0
