@@ -10,8 +10,8 @@ class Rectangle(BaseGeometry):
         """check width and height value with integer_validator
         from BaseGeometry class
         then attribute the value to self.width and self.height"""
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
 
