@@ -64,3 +64,7 @@ This is a test file, First import ``BaseGeometry`` from ``BaseGeometry`` class
     >>> bg.integer_validator("numbers", 0, 1)
     Traceback (most recent call last):
     TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+
+    >>> mod = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+    >>> len(mod) > 1
+    True
