@@ -20,7 +20,7 @@ class VerboseList(list):
             print("Removed [{}] from the list.".format(item))
             super().remove(item)
         except ValueError:
-            print("Item [{}] not in list.".format(item))
+            print("ValueError: Item [{}] not in list.".format(item))
 
     def pop(self, index=-1):
         print("Popped [{}] from the list.".format(self[index]))
