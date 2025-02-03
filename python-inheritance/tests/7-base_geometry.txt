@@ -68,3 +68,7 @@ This is a test file, First import ``BaseGeometry`` from ``BaseGeometry`` class
     >>> mod = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
     >>> len(mod) > 1
     True
+
+    >>> mod = __import__("7-base_geometry").__doc__
+    >>> len(mod) > 1
+    True
