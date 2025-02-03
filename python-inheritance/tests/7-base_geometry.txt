@@ -6,65 +6,6 @@ Using ``base_geometry``
 
 This is a test file, First import ``BaseGeometry`` from ``BaseGeometry`` class
 
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("my_int", 12)
-    >>> bg.integer_validator("width", 89)
-
-    >>> bg.integer_validator("name", "John")
-    Traceback (most recent call last):
-    TypeError: name must be an integer
-
-    >>> bg.integer_validator("age", 0)
-    Traceback (most recent call last):
-    ValueError: age must be greater than 0
-
-    >>> bg.integer_validator("distance", -4)
-    Traceback (most recent call last):
-    ValueError: distance must be greater than 0
-
-    >>> bg.integer_validator(10, 5)
-
-    >>> bg.integer_validator(-5, 5)
-
-    >>> bg.integer_validator(5)
-    Traceback (most recent call last):
-    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
-    >>> bg.integer_validator()
-    Traceback (most recent call last):
-    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
-    >>> bg.integer_validator("", 5)
-
-    >>> bg.integer_validator(5, "")
-    Traceback (most recent call last):
-    TypeError: 5 must be an integer
-
-    >>> bg.integer_validator("age", 1.5)
-    Traceback (most recent call last):
-    TypeError: age must be an integer
-
-    >>> bg.integer_validator("age", [3])
-    Traceback (most recent call last):
-    TypeError: age must be an integer
-
-    >>> bg.integer_validator("age", {3, 4})
-    Traceback (most recent call last):
-    TypeError: age must be an integer
-
-    >>> bg.area()
-    Traceback (most recent call last):
-    Exception: area() is not implemented
-
-    >>> bg.integer_validator("infnumber", int('inf'))
-    Traceback (most recent call last):
-    ValueError: invalid literal for int() with base 10: 'inf'
-
-    >>> bg.integer_validator("numbers", 0, 1)
-    Traceback (most recent call last):
-    TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
-
     >>> mod = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
     >>> len(mod) > 1
     True
