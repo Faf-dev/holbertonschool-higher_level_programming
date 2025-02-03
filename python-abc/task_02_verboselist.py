@@ -16,8 +16,11 @@ class VerboseList(list):
 
     def remove(self, item):
         """remove method"""
-        print("Removed [{}] from the list.".format(item))
-        super().remove(item)
+        try:
+            print("Removed [{}] from the list.".format(item))
+            super().remove(item)
+        except ValueError:
+            print("Item [{}] not in list".format(item))
 
     def pop(self, index=-1):
         print("Popped [{}] from the list.".format(self[index]))
