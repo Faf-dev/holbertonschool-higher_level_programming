@@ -41,10 +41,6 @@ class Rectangle(BaseGeometry):
         """ change str() rules"""
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
 
-    def __print__(self):
-        """change print() rules"""
-        print(self.__str__)
-
     def area(self):
         """add the BaseGeometry area function"""
         super().area
