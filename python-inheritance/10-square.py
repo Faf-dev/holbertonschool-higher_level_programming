@@ -54,10 +54,13 @@ class Square(Rectangle):
         """validate size with integer_validator function
         then attribute the value to self.size"""
         super().integer_validator("size", size)
-        super().__init__(size, size)
         self.__size = size
 
     def area(self):
         """add the area function"""
         super().area
         return self.__size * self.__size
+
+    def __str__(self):
+        """add the str() rules"""
+        return ("[Square] {}/{}".format(self.__size, self.__size))
