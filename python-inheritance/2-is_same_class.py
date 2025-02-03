@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Create a function who return True if
-obj is an instance of specified class"""
+obj is exactly an instance of specified class"""
 
 
 def is_same_class(obj, a_class):
