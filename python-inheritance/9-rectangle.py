@@ -43,5 +43,4 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """add the BaseGeometry area function"""
-        super().area
         return self.__width * self.__height
