@@ -22,3 +22,17 @@ This is a test file, First import ``Mylist`` from ``MyList`` class
 
     >>> print(my_list)
     [1, 4, 2, 3, 5]
+
+    >>> empty_list = MyList()
+    >>> empty_list.print_sorted()
+    []
+
+    >>> issubclass(MyList, list)
+    True
+
+    >>> negative_list = MyList()
+    >>> negative_list.append(-1)
+    >>> negative_list.append(-4)
+    >>> negative_list.append(-2)
+    >>> negative_list.print_sorted()
+    [-4, -2, -1]
