@@ -17,7 +17,7 @@ def home():
     return "Welcome to the Flask API!"
 
 
-@app.route('/data')
+@app.route("/data")
 def data():
     """
     ...
@@ -25,7 +25,7 @@ def data():
     return jsonify(list(users.keys()))
 
 
-@app.route('/status')
+@app.route("/status")
 def status():
     """
     ...
@@ -33,7 +33,7 @@ def status():
     return "OK"
 
 
-@app.route('/users/<username>')
+@app.route("/users/<username>")
 def user(username):
     """
     ...
@@ -44,7 +44,7 @@ def user(username):
     return jsonify({"error": "User not found"}), 404
 
 
-@app.route('/add_user', methods=['POST'])
+@app.route('/add_user', methods=["POST"])
 def add_user():
     """
     ...
@@ -52,7 +52,7 @@ def add_user():
     data = request.get_json()
     username = data.get('username')
     if not username:
-        return jsonify({"error": "User already exist!"}), 400
+        return jsonify({"error":"Username is required"}), 400
     users[username] = data
     return jsonify({"message": "Success, user added !", "user": data}), 201
 
