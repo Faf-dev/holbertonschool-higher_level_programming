@@ -36,8 +36,8 @@ def user(username):
 def add_user():
     data = request.get_json()
     username = data.get('username')
-    if username in users:
-        return jsonify({"error": "User already exist!"}), 409
+    if not username:
+        return jsonify({"error": "User already exist!"}), 400
     return jsonify({"message": "Success, user added !", "user": users[username]}), 201
 
 
