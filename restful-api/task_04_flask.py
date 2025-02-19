@@ -43,7 +43,7 @@ def add_user():
         "age": data.get("age"),
         "city": data.get("city")
     }
-    return jsonify({"message": "Success, user added !", "user": users[username]}), 201
+    return jsonify({"message": "Success, user added !", "user": data}), 201
 
 
 if __name__ == "__main__":
