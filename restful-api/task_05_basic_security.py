@@ -65,7 +65,7 @@ def login():
     if username in users and \
             check_password_hash(users[username]["password"], password):
         token = create_access_token(identity=username)
-        return jsonify({"access_token": token})
+        return jsonify({"access_token": token}), 200
 
     return jsonify({"error": "Invalid credentials"}), 401
 
@@ -85,7 +85,7 @@ def admin_only():
     if not user_info or user_info["role"] is not "admin":
         return jsonify({"error": "Admin access required"}), 403
 
-    return jsonify({"message": "Admin Access: Granted"})
+    return jsonify({"message": "Admin Access: Granted"}), 200
 
 
 @jwt.unauthorized_loader
