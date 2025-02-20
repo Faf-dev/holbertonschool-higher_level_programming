@@ -49,12 +49,16 @@ def verify_password(username, password):
 @app.route('/basic-protected', methods=["GET"])
 @auth.login_required
 def basic_protected():
-    return jsonify({"message": "Basic Auth: Access Granted"})
+    return "Basic Auth: Access Granted"
 
 
 @app.route('/login', methods=["POST"])
 def login():
     data = request.get_json()
+
+    if not data or "username" not in data or "password"not in data:
+        return jsonify({"error": "Missing username or password"}), 400
+
     username = data.get("username")
     password = data.get("password")
 
