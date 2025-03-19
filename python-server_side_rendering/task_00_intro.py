@@ -30,14 +30,14 @@ def generate_invitations(template, attendees):
         attendee = {key: (value if value is not None else "{}: N/A"
                           .format(key)) for key, value in attendee.items()}
 
-        invit = invit.replace("{name}", attendee.get("name", "name: N/A"))
+        invit = invit.replace("{name}", attendee.get("name", "{name}"))
         invit = invit.replace(
-            "{event_date}", attendee.get("event_date", "event_date: N/A"))
+            "{event_date}", attendee.get("event_date", "{event_date}"))
         invit = invit.replace(
             "{event_location}",
-            attendee.get("event_location", "event_location: N/A"))
+            attendee.get("event_location", "{event_location}"))
         invit = invit.replace(
-            "{event_title}", attendee.get("event_title", "event_title: N/A"))
+            "{event_title}", attendee.get("event_title", "{event_title}"))
 
         filename = "output_{}.txt".format(i)
 
