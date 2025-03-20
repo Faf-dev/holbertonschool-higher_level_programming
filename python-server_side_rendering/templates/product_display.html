@@ -7,7 +7,9 @@
     {% include 'header.html' %}
     <h1>Products List</h1>
     <p>This is a simple Flask application.</p>
-    {% if products %}
+    {% if error %}
+        <p>Error : {{ error }}</p>
+    {% elif products %}
     <table>
         <thead>
             <tr>
@@ -28,7 +30,7 @@
         </tbody>
     </table>
     {% else %}
-        <p></p>
+        <p>No products found</p>
     {% endif %}
     {% include 'footer.html' %}
 </body>
