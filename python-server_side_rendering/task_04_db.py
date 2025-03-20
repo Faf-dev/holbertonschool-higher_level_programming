@@ -63,7 +63,7 @@ def products():
             cursor = connexion.cursor()
 
             if id:
-                cursor.execute("SELECT * FROM Products WHERE id = {id}")
+                cursor.execute("SELECT * FROM Products WHERE id = ?", (id,))
                 results = cursor.fetchall()
             else:
                 cursor.execute("SELECT * FROM Products")
