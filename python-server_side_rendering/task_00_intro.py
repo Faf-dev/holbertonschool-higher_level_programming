@@ -30,17 +30,13 @@ def generate_invitations(template, attendees):
 
         invit = template  # Copy of template
 
-        attendee = {key: (value if value is not None else "N/A"
-                          ) for key, value in attendee.items()}
-
         invit = invit.replace("{name}", attendee.get("name", "{name}"))
-        invit = invit.replace(
-            "{event_date}", attendee.get("event_date", "{event_date}"))
-        invit = invit.replace(
-            "{event_location}",
-            attendee.get("event_location", "{event_location}"))
-        invit = invit.replace(
-            "{event_title}", attendee.get("event_title", "{event_title}"))
+        invit = template.format(
+            name=attendee.get("name", "N/A"),
+            event_title=attendee.get("event_title", "N/A"),
+            event_date=attendee.get("event_date", "N/A"),
+            event_location=attendee.get("event_location", "N/A"),
+        )
 
         filename = "output_{}.txt".format(i)
 
