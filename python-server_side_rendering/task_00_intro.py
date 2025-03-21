@@ -29,8 +29,8 @@ def generate_invitations(template, attendees):
 
         invit = template  # Copy of template
 
-        attendee = {key: (value if value is not None else "{}: N/A"
-                          .format(key)) for key, value in attendee.items()}
+        attendee = {key: (value if value is not None else "N/A"
+                          ) for key, value in attendee.items()}
 
         invit = invit.replace("{name}", attendee.get("name", "{name}"))
         invit = invit.replace(
