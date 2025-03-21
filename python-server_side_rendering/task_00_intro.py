@@ -10,16 +10,17 @@ def generate_invitations(template, attendees):
         raise FileNotFoundError("template.txt not found")
 
     if not attendees:
-        raise ValueError("No data provided, no output files generated.")
+        print("Error: No data provided, no output files generated.")
+        return
 
     if not template:
         raise ValueError("Template is empty, no output files generated.")
 
     if not isinstance(template, str):
-        print("Template should be a string.")
+        print("Error: Template should be a string.")
         return
     if not isinstance(attendees, list):
-        print("Attendees should be a list.")
+        print("Error: Attendees should be a list.")
         return
 
     for i, attendee in enumerate(attendees, start=1):
@@ -43,8 +44,5 @@ def generate_invitations(template, attendees):
 
         filename = "output_{}.txt".format(i)
 
-        try:
-            with open(filename, "w", encoding="utf-8") as f:
-                f.write(invit)
-        except Exception as e:
-            return {'error': str(e)}
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(invit)
