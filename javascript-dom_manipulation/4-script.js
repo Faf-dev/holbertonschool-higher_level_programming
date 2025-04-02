@@ -9,5 +9,5 @@ function addLi () {
 
 const addItem = document.querySelector('#add_item');
 if (addItem) {
-  addItem.addEventListener('click', addLi); 
+  addItem.addEventListener('click', addLi);
 }
