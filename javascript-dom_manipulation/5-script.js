@@ -1,4 +1,4 @@
-function updateHeaderText() {
+function updateHeaderText () {
   const header = document.querySelector('header');
   if (header) {
     header.textContent = 'New Header!!!';
